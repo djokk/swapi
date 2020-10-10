@@ -4,9 +4,8 @@ import router from './router'
 import store from './store'
 
 // axios for REST API Requests
-import axios from 'axios'
-import VueAxios from 'vue-axios'
-Vue.use(VueAxios, axios)
+import axios_instance from '@/config/http'
+Vue.prototype.$axios = axios_instance;
 
 // Buefy UI framework (Bulma)
 import Buefy from 'buefy'

@@ -1,18 +1,51 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <section class="hero is-warning">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">REST API</h1>
+          <h2 class="subtitle">methods from https://swapi.dev/api/</h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-2">
+      <b-tabs v-model="activeTab" position="is-centered">
+        <b-tab-item label="People" icon="account-group">
+          <PeopleTable />
+        </b-tab-item>
+      </b-tabs>
+    </section>
+    
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { mapActions } from "vuex";
+import PeopleTable from "@/components/PeopleTable";
 
 export default {
-  name: 'Home',
+  name: "Home",
+  // computed: {
+  //   ...mapGetters({
+  //     name: 'people/name'
+  //   })
+  // },
   components: {
-    HelloWorld
-  }
-}
+    PeopleTable,
+  },
+  data() {
+    return {
+      activeTab: 0,
+    };
+  },
+  methods: {
+    ...mapActions({
+      loadPeople: "people/loadPeople",
+    }),
+  },
+  mounted() {
+    this.loadPeople();
+  },
+};
 </script>

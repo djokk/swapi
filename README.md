@@ -1,4 +1,4 @@
-# swapi
+# SWAPI
 
 ## Project setup
 ```
