@@ -204,7 +204,6 @@ export default {
       SET_SEARCH_AREA: "people/SET_SEARCH_AREA"
     }),
     onPageChange(page) {
-      console.log(page);
       this.SET_PAGE_NUMBER(page);
       this.loadPeople();
     },

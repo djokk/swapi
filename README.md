@@ -1,4 +1,20 @@
-# SWAPI
+# SWAPI | PEOPLE ASYNC DATA WITH OPTIONS
+
+## API ENDPOINT URI
+[https://swapi.dev/api/people](https://swapi.dev/api/people)
+
+## Technologies
+### ✅ Vue JS
+### ✅ Axios
+### ✅ Vue-router
+### ✅ Vuex
+### ✅ Buefy UI
+
+## Demo
+[http://swapi-people-demo.surge.sh/](http://swapi-people-demo.surge.sh/)
+<p align="left">
+  <img src="./demo/swapi_people.gif">
+</p>
 
 ## Project setup
 ```
